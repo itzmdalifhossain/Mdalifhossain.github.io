@@ -1,0 +1,334 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Alif Hossain | SEO Specialist & Search Engine Marketer</title>
+    <style>
+        :root {
+            --primary-color: #0077B6;
+            --secondary-color: #03045E;
+            --text-color: #333333;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+            --black: #000000;
+            --accent-color: #00B4D8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            margin-left: 2rem;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: var(--white);
+            padding: 15rem 5% 10rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .hero-image {
+            width: 400px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--accent-color);
+        }
+
+        .hero-image::after {
+            content: 'Profile Photo';
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-card li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-card li::before {
+            content: '✓';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .target-countries {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 50px 5%;
+            margin: 0;
+        }
+
+        .target-countries h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .countries-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 10rem;
+            }
+            .hero-content {
+                margin-top: 3rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Md. Alif <span>Hossain</span></div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <h1>Md. Alif Hossain</h1>
+                <h2>Modern Search Engine Marketer & SEO Specialist</h2>
+                <p>Helping businesses gain more leads, calls, and sales with data-driven search engine marketing and expert SEO strategies. I help global brands grow their online presence.</p>
+                <a href="#contact" class="cta-btn">Contact Me</a>
+            </div>
+            <div class="hero-image">
+                <!-- এখানে আপনার ছবি যুক্ত করতে পারেন -->
+            </div>
+        </section>
+
+        <section id="services">
+            <h2 class="section-title">My Services</h2>
+            <p class="section-subtitle">Tailored growth strategies for local services and e-commerce.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Local Service Growth</h3>
+                    <h4>Platforms:</h4>
+                    <p>Webflow, WordPress</p>
+                    <h4>Specialized Niches:</h4>
+                    <ul>
+                        <li>Plumbing</li>
+                        <li>HVAC</li>
+                        <li>Electrician</li>
+                        <li>Roofing</li>
+                        <li>Asphalt Contractor</li>
+                        <li>Mold & Water Damage Restoration</li>
+                        <li>Garage Door Repair</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>E-Commerce Growth</h3>
+                    <h4>Platforms:</h4>
+                    <p>Shopify, WordPress, Webflow</p>
+                    <h4>Specialized Niches:</h4>
+                    <ul>
+                        <li>High-End Pet Furniture</li>
+                        <li>Architectural Lighting</li>
+                        <li>Outdoor Equipment</li>
+                        <li>Plumbing Tube</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="target-countries">
+            <h3>Target Countries</h3>
+            <div class="countries-list">
+                <span>USA</span> | <span>United Kingdom</span> | <span>Canada</span> | 
+                <span>Australia</span> | <span>Netherlands</span> | <span>Sweden</span> | 
+                <span>Singapore</span> | <span>Norway</span> | <span>Ireland</span> | 
+                <span>New Zealand</span> | <span>Denmark</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Md. Alif Hossain. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
